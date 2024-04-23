@@ -4,7 +4,7 @@ version = "0.0.0"
 edition = "2021"
 description = "Introduces object that allows for 3d interpolation on arbitrary grids."
 repository = "https://github.com/y-hoffmann/interp3d"
-license = "MIT OR Apache-2.0"
+license = "MIT"
 categories = ["mathematics", "science"]
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
