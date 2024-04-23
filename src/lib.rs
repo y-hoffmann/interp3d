@@ -130,7 +130,7 @@ impl Interp3D {
     /// # Example
     /// 
     /// ```
-    /// use interp3d::*;
+    /// use crate::interp3d::*;
     /// 
     /// let mut ip: Interp3D = Interp3D::default();
     /// 
@@ -176,7 +176,7 @@ impl Interp3D {
     /// # Example
     /// 
     /// ```
-    /// use interp3d::*;
+    /// use crate::interp3d::*;
     /// 
     /// let config = DataGenConfSingle {
     ///     n: 11,
@@ -207,19 +207,19 @@ impl Interp3D {
         ip
     }
 
-    /// You can also make Interp3D load from file directly.  
-    /// The data in the file can stem from either a previous export after data generation or you can format you own existing data for use with this interpolator.
-    /// Information on the data format can be found at <github.com/y-hoffmann/interp3d> or <crates.io/interp3d>.
+    /// This will construct the interpolator with data read from a file directly.  
+    /// The data in the file can stem from either a previous export after data generation or you can format your own existing data for use with this interpolator.
+    /// Information on the data format can be found on [the github page](https://github.com/y-hoffmann/interp3d) and [the crates.io page](https://crates.io/crates/interp3d) for this crate.
     /// 
     /// # Example
     /// ```
-    /// use inter3p::*;
+    /// use crate::interp3d::*;
     /// 
     /// let file = String::from("some/file.ip3d"); // file extension can be whatever (also nothing)
-    /// let ip = Interp3D::from_file(file);
+    /// let ip = Interp3D::from_file(&file);
     /// // ip is now set up for use
     /// ```
-    pub fn from_file<F>(file: &str) -> Self {
+    pub fn from_file(file: &str) -> Self {
         let ip: Interp3D = Interp3D::default();
         //ip.import_data(file);
 
